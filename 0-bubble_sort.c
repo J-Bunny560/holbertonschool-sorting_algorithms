@@ -1,43 +1,35 @@
 #include "sort.h"
-/**
- * swap_ints - Swap two intergers in an array.
- * @a: The first interger to swap.
- * @b: The second interger to swap.
- */
-void swap_ints(int *a, int *b)
-{
-int tmp;
-
-tmp = *a;
-*a = *b;
-*b = tmp;
-}
-/**
- * bubble-sort - Sort an array of intergers in ascending order.
- * @array: An array of intergers to sort.
- * @size: The size of the array.
- * Description: Prints the array after each swap.
- */
+/* Bubble sort function */
 void bubble_sort(int *array, size_t size)
 {
-size_t i, len = size;
-bool bubbly = false;
+size_t i, j;
+int temp;
 
-if (array == NULL || size < 2)
-return;
-
-while (bubbly == false)
+for (i = 0; i < size - 1; i++)
 {
-bubbly = true;
-for (i = 0; i < len - 1; i++)
+for (j = 0; j < size - i - 1; j++)
 {
-if (array[i] > array[i + 1])
+if (array[j] > array[j + 1])
 {
-swap_ints(array + i, array + i + 1);
+temp = array[j];
+array[j] = array[j + 1];
+array[j + 1] = temp;
 print_array(array, size);
-bubbly = false;
 }
 }
-len--;
 }
+}
+
+/* Printing helper functions */
+void print_array(const int *array, size_t size)
+{
+size_t i;
+
+for (i = 0; i < size; i++)
+{
+printf("%d", array[i]);
+if (i < size - 1)
+printf(", ");
+}
+printf("\n");
 }
