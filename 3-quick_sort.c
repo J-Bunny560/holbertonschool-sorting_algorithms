@@ -8,7 +8,6 @@
  * kwiksort - quick sort via lamuto partition
  * quick_sort - quickly sorts
  * partition - "partition" array
- *
  */
 void swaps(int *array, size_t size, int *a, int *b)
 {
