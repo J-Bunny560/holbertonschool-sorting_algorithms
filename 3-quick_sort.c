@@ -19,6 +19,11 @@ void swaps(int *array, size_t size, int *a, int *b)
 
 /**
  * kwiksort - quick sort via lamuto partition
+ * @array: the array
+ * @size: size of array
+ * @low: low [] of sort
+ * @high: high [] of sort
+ *
  */
 void kwiksort(int *array, size_t size, ssize_t low, ssize_t high)
 {
@@ -32,7 +37,11 @@ void kwiksort(int *array, size_t size, ssize_t low, ssize_t high)
 }
 
 /**
- * quick_sort - quickly sorts
+ * quick_sort - to quick sort, basically a junk func prototype i had to
+ * embetter
+ * @array: the array to sort
+ * @size: size of array
+ *
  */
 void quick_sort(int *array, size_t size)
 {
@@ -44,6 +53,11 @@ void quick_sort(int *array, size_t size)
 
 /**
  * partition - "partition" array
+ * @array: the array
+ * @size: the size of array
+ * @low: the bottom of the index
+ * @high: the top of it
+ * Return: size_t part, the partition value
  */
 size_t partition(int *array, size_t size, ssize_t low, ssize_t high)
 {
