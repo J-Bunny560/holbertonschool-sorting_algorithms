@@ -5,9 +5,6 @@
  * @size: the size of array for printing func
  * @a: one int
  * @b: the other int
- * kwiksort - quick sort via lamuto partition
- * quick_sort - quickly sorts
- * partition - "partition" array
  */
 void swaps(int *array, size_t size, int *a, int *b)
 {
@@ -20,6 +17,9 @@ void swaps(int *array, size_t size, int *a, int *b)
 	}
 }
 
+/**
+ * kwiksort - quick sort via lamuto partition
+ */
 void kwiksort(int *array, size_t size, ssize_t low, ssize_t high)
 {
 	if (low < high)
@@ -31,6 +31,9 @@ void kwiksort(int *array, size_t size, ssize_t low, ssize_t high)
 	}
 }
 
+/**
+ * quick_sort - quickly sorts
+ */
 void quick_sort(int *array, size_t size)
 {
 	if (!array || !size)
@@ -39,6 +42,9 @@ void quick_sort(int *array, size_t size)
 	kwiksort(array, size, 0, size - 1);
 }
 
+/**
+ * partition - "partition" array
+ */
 size_t partition(int *array, size_t size, ssize_t low, ssize_t high)
 {
 
