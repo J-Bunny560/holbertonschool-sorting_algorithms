@@ -37,7 +37,7 @@ void kwiksort(int *array, size_t size, ssize_t low, ssize_t high)
 }
 
 /**
- * quick_sort - to quick sort, basically a junk func prototype i had to
+ * quick_sort - to quick sort
  * embetter
  * @array: the array to sort
  * @size: size of array
